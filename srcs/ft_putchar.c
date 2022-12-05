@@ -6,7 +6,7 @@
 /*   By: jumoreno <jumoreno@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:33:45 by jumoreno          #+#    #+#             */
-/*   Updated: 2022/11/25 15:01:40 by jumoreno         ###   ########.fr       */
+/*   Updated: 2022/12/05 18:17:03 by jumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,25 @@
 
 int	ft_putchar(char const c, int count)
 {
-	if (write(1, &c, 1) == 1)
+	if (write(1, &c, 1) == -1)
 		return (-1);
 	count += 1;
+	return (count);
+}
+
+int	ft_putstr(char const *s, int count)
+{
+	unsigned int	i;
+	
+	i = 0;
+	if (!s)
+		s = "(null)";
+	while (s[i])
+	{
+		count = ft_putchar(s[i++], count);
+		if (count == -1)
+			return (-1);
+	}
 	return (count);
 }
 /*
