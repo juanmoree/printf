@@ -6,7 +6,7 @@
 /*   By: jumoreno <jumoreno@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 17:01:44 by jumoreno          #+#    #+#             */
-/*   Updated: 2022/11/14 17:46:36 by jumoreno         ###   ########.fr       */
+/*   Updated: 2022/11/25 15:08:58 by jumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-int	ft_putchar(int count, char c);
+int	ft_putchar(char const c, int count);
+int	ft_putnbr(int nbr, int count);
+int	ft_putstr(char const *s, int count);
 
 #endif
